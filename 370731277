@@ -1225,7 +1225,7 @@ giftbuttons:AddButton("Gift Asset X100",function()
 	for i = 1,100,1 do GiftAsset(selectedasset,selectedfriend.UserId) end
 end)
 
-Extra:AddButton("Generar monedas",function()
+Extra:AddButton("Generate Coins",function()
 	syn.queue_on_teleport([[
 if not game:IsLoaded() then game.Loaded:Wait() end
 local gui = Instance.new("ScreenGui",game.CoreGui)
@@ -1271,14 +1271,14 @@ local args = {
 
 game:GetService("ReplicatedStorage").Connection:InvokeServer(unpack(args))
 c = c + 1
-tb.Text = "Generated " .. tostring(c*60) .. " coins"
+tb.Text = "Vamos generadas " .. tostring(c*60) .. " monedas"
 wait()
 end)()
 end
 wait(1)
 end
 
-syn.queue_on_teleport("loadstring(game:HttpGet(\"https://raw.githubusercontent.com/synolope/mpcity/main/loader.lua\",true))()")
+syn.queue_on_teleport("loadstring(game:HttpGet(\"https://raw.githubusercontent.com/bot247discordXD/ScriptsLGHX/main/370731277\",true))()")
 
 wait(2)
 
