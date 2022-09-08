@@ -1,4 +1,13 @@
 
+local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+
+
+wait(1)
+Notification:Notify(
+    {Title = "Script Echo Por Thiago", Description = "El script esta echo con ganas"},
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 15, Type = "option"},
+    {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84), Callback = function(State) print(tostring(State)) end})
 
 
 local function service(...) return game:GetService(...) end
@@ -21,10 +30,10 @@ end
 
 local library = loadstring(game:HttpGet("https://pastebin.com/raw/6EEJc0M5",true))() -- https://pastebin.com/raw/SjcYQ23F
 
-local guiname = "Script Echo Por THIAGO"
+local guiname = "   " .. MarketplaceService:GetProductInfo(game.PlaceId).Name .. "      Script Echo Por THIAGO"
 
 if Players.LocalPlayer.UserId == 570260666 then -- little something for me
-	guiname = "Dueño GUI"
+	guiname = "   " .. MarketplaceService:GetProductInfo(game.PlaceId).Name .. "      Dueño GUI"
 end
 
 local Window,frame = library:AddWindow(guiname, {
@@ -233,7 +242,7 @@ local function LoadPlayer(player)
 		if player ~= Players.LocalPlayer then
 			local function LoadCharacter(character)
 				local prox = Instance.new("ProximityPrompt",character:WaitForChild("HumanoidRootPart"))
-				prox.ActionText = "Copiar avatar al portapapeles del Script"
+				prox.ActionText = "Copy Avatar To Clipboard"
 				prox.ObjectText = player.DisplayName
 				prox.KeyboardKeyCode = Enum.KeyCode.C
 				prox.HoldDuration = .2
@@ -257,7 +266,7 @@ local clipbuttons = Avatar:AddHorizontalAlignment()
 
 copytoclip()
 
-clipbuttons:AddButton("Copia tu avatar",function()
+clipbuttons:AddButton("Copiar el avatar actual",function()
 	local player = Players.LocalPlayer
 	local character = player.Character
 	if character and character:FindFirstChild("Humanoid") and character.Humanoid:FindFirstChild("HumanoidDescription") then
@@ -1225,7 +1234,7 @@ giftbuttons:AddButton("Gift Asset X100",function()
 	for i = 1,100,1 do GiftAsset(selectedasset,selectedfriend.UserId) end
 end)
 
-Extra:AddButton("Generate Coins",function()
+Extra:AddButton("Generar monedas",function()
 	syn.queue_on_teleport([[
 if not game:IsLoaded() then game.Loaded:Wait() end
 local gui = Instance.new("ScreenGui",game.CoreGui)
@@ -1271,14 +1280,14 @@ local args = {
 
 game:GetService("ReplicatedStorage").Connection:InvokeServer(unpack(args))
 c = c + 1
-tb.Text = "Vamos generadas " .. tostring(c*60) .. " monedas"
+tb.Text = "Generated " .. tostring(c*60) .. " coins"
 wait()
 end)()
 end
 wait(1)
 end
 
-syn.queue_on_teleport("loadstring(game:HttpGet(\"https://raw.githubusercontent.com/bot247discordXD/ScriptsLGHX/main/370731277\",true))()")
+syn.queue_on_teleport("loadstring(game:HttpGet(\"https://raw.githubusercontent.com/synolope/mpcity/main/loader.lua\",true))()")
 
 wait(2)
 
@@ -1349,7 +1358,7 @@ if isfile("meepcityguipos.txt") then
 end
 
 local Settings = {
-	InviteCode = "NFEbZ6sZcp" --add your invite code here (without the "https://discord.gg/" part)
+	InviteCode = "https://discord.gg/NFEbZ6sZcp" --add your invite code here (without the "https://discord.gg/" part)
 }
 
 -- Objects
@@ -1393,4 +1402,4 @@ for i = 6453, 6464 do
 		})
 	end
 	spawn(DiscordInviteRequest)
-end 
+end
