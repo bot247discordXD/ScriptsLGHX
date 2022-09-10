@@ -208,7 +208,7 @@ local function webhook(msg)
 end
     
 --GUI
-local Window = library:AddWindow("PornHUB",
+local Window = library:AddWindow("ThiagoHUB",
 {
     main_color = Color3.fromRGB(0, 128, 0),
     min_size = Vector2.new(350, 410),
@@ -498,9 +498,10 @@ end,
     ["clear"] = false
 })
 webhookBox.Text = getgenv().settings.webhookBox
-webhookTab:AddButton("Mensaje para conseguir bobuts", function()
+webhookTab:AddSwitch("Mensaje para conseguir bobuts", function()
+    wait(5)
     if getgenv().settings.webhookBox then
-        webhook("Agradeceriamos si puedes donar : https://www.roblox.com/users/570260666/profile @everyone")
+        webhook("💰 Estoy jugando PLS DONATE 💰 Para ganar unos robux. ¿Me donarias? Mi perfil es : https://www.roblox.com/users/570260666/profile")
     end
 end)
 
@@ -585,7 +586,7 @@ end
 Players.LocalPlayer.Character:SetPrimaryPartCFrame(CFrame.new(Players.LocalPlayer.Character.HumanoidRootPart.Position, Vector3.new(40, 14, 101)))
 if getgenv().settings.danceToggle then
     wait(1)
-    Players:Chat("/e dance")
+    Players:Chat("/e monkey")
 end
 if getgenv().settings.textUpdateToggle and getgenv().settings.customBoothText then
     update()
