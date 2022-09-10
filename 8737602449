@@ -499,9 +499,9 @@ end,
 })
 webhookBox.Text = getgenv().settings.webhookBox
 webhookTab:AddSwitch("Mensaje para conseguir bobuts", function()
-    wait(5)
+    wait(10.5)
     if getgenv().settings.webhookBox then
-        webhook("💰 Estoy jugando PLS DONATE 💰 Para ganar unos robux. ¿Me donarias? Mi perfil es : https://www.roblox.com/users/570260666/profile")
+        webhook("💰 Estoy jugando PLS DONATE 💰 Para ganar unos robux. ¿Me donarias? Mi perfil es : https://www.roblox.com/users/570260666/profile <@&1016524619664085032>")
     end
 end)
 
